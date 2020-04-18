@@ -1,0 +1,47 @@
+
+
+earnings = 0
+
+spending = 0
+
+balence = earnings - spending
+
+
+def moneyEarned():
+
+    global earnings
+
+    income = int(input("how much did you make"))
+    earnings += income
+
+
+def moneySpent():
+
+    global spending
+
+    expenses = int(input("how much did you spend"))
+    spending += expenses
+
+
+def transaction():
+
+    action = input("if income press 1 OR if expense press 2")
+
+    if action == "1":
+                    moneyEarned()
+    else:
+        action == "2"
+        moneySpent()
+
+    balence = earnings - spending
+    print("Balence :", balence)
+    print("Earnings :", earnings)
+    print("Spending :", spending)
+
+
+def transacting():
+    while balence >= -2:
+        transaction()
+
+
+transacting()
